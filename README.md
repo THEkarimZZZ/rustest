@@ -1,0 +1,2 @@
+# rustest
+NULL
