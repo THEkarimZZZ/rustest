@@ -19,7 +19,8 @@ import TestConnection from '@/pages/TestConnection'
 
 function App() {
   return (
-    <BrowserRouter>
+    /* basename="/rustest" позволяет роутеру понимать, что сайт находится в подпапке */
+    <BrowserRouter basename="/rustest">
       <AuthProvider>
         <Routes>
           {/* Публичные маршруты */}
