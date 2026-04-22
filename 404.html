@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Перенаправление...</title>
   <script>
-    // Перенаправляем на index.html, сохраняя путь
-    const path = window.location.pathname;
-    // Если это не статический файл (js, css, images, etc.)
-    if (!/\.(js|css|png|jpg|jpeg|svg|ico|woff2?|ttf|eot)$/i.test(path)) {
-      window.location.pathname = '/rustest';
+    // Сохраняем текущий путь и перенаправляем на index.html
+    const currentPath = window.location.pathname;
+    // Если это не статический файл
+    if (!/\.(js|css|png|jpg|jpeg|svg|ico|woff2?|ttf|eot|json)$/i.test(currentPath)) {
+      // Перенаправляем на index.html с сохранением пути через hash
+      window.location.href = '/rustest' + currentPath;
     }
   </script>
 </head>
