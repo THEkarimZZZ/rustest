@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перенаправление...</title>
+  <script>
+    // Перенаправляем на index.html, сохраняя путь
+    const path = window.location.pathname;
+    // Если это не статический файл (js, css, images, etc.)
+    if (!/\.(js|css|png|jpg|jpeg|svg|ico|woff2?|ttf|eot)$/i.test(path)) {
+      window.location.pathname = '/rustest';
+    }
+  </script>
+</head>
+<body>
+  <p>Перенаправление...</p>
+</body>
+</html>
